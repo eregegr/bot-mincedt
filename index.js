@@ -26,6 +26,8 @@ const bot = mineflayer.createBot({
     hideErrors: true
 })
 
+bot.chat('/l 2006')
+
 const telegram_bot = new telegram(cfg.token, {polling: true});
 
 telegram_bot.on('text', msg => {
