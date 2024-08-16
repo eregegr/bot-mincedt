@@ -24,9 +24,12 @@ const bot = mineflayer.createBot({
     username: cfg.nick,
     version: '1.18.2',
     hideErrors: true
+    
 })
-
+bot.once ("reg", function () {
+await sleep(500)
 bot.chat('/l 2006')
+})
 
 const telegram_bot = new telegram(cfg.token, {polling: true});
 
